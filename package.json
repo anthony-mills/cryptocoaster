@@ -1,0 +1,38 @@
+{
+  "name": "SantaSprint",
+  "version": "0.0.1",
+  "description": "HTML5 game built using the Phaser framework",
+  "main": "index.js",
+  "dependencies": {
+    "grunt": "~0.4.5"
+  },
+  "devDependencies": {
+      "grunt": "~0.4.2",
+      "grunt-contrib-copy": "latest",
+      "grunt-contrib-cssmin": "latest",
+      "grunt-contrib-jshint": "latest",
+      "grunt-contrib-uglify": "latest",
+      "grunt-contrib-watch": "latest",
+      "jshint-stylish": "latest",
+      "grunt-string-replace": "latest",
+      "grunt-contrib-clean": "latest",
+      "grunt-uncss": "latest",
+      "grunt-processhtml": "latest",
+      "grunt-line-remover": "latest"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@bitbucket.org:anthony_mills/diverdan.git"
+  },
+  "keywords": [
+    "Game",
+    "PhaserJS"
+  ],
+  "author": "Anthony Mills",
+  "license": "Proprietary Closed Source",
+  "srcPath": "src",
+  "wwwPath": "www"
+}
