@@ -52,7 +52,7 @@ The various game functionality is defined within the following game states:
 
 You can play a [running version of the game here](https://gateway.ipfs.io/ipfs/Qma2P61qA2HCnQjjs4nhejLkU6bwbN34fGLYCNxhzsGSqh/).
 
-# Licence
+### Licence
 
 Copyright (C) 2018 [Anthony Mills](http://www.anthony-mills.com)
 
