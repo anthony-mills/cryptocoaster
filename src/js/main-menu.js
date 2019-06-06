@@ -42,23 +42,16 @@ CryptoCoaster.MainMenu.prototype = {
     CryptoCoaster.data.gameBg = this.add.tileSprite(0, 0, 800, 490, 'gameBg');
     CryptoCoaster.data.gameBg.fixedToCamera = true;
 
-    var titleText = this.game.add.text(this.game.camera.width * 0.5, 20, 'Crypto', { 
-                                                                            stroke: "#000", 
-                                                                            strokeThickness: 10, 
-                                                                            font: "70px Flea Market Finds", 
-                                                                            fill: "#7CFC00"
-                                                                        });      
+    var titleText = this.game.add.bitmapText(this.game.camera.width * 0.5, 20, 'market','Crypto', 70);      
 
-    titleText.x = (this.game.camera.width * 0.5 - 220);  
+    titleText.x = (this.game.camera.width * 0.5 - 180); 
+    titleText.tint = 0x7CFC00 
     titleText.fixedToCamera = true; 
 
-    var titleText1 = this.game.add.text(this.game.camera.width * 0.5, 20, 'Coaster', { 
-                                                                            stroke: "#000", 
-                                                                            strokeThickness: 10, 
-                                                                            font: "70px Flea Market Finds", 
-                                                                            fill: "#c90404"
-                                                                        });      
+    var titleText1 = this.game.add.bitmapText(this.game.camera.width * 0.5, 20, 'market','Coaster', 70);  
+
     titleText1.x = ( this.game.camera.width * 0.5 - 20 );  
+    titleText1.tint = 0xc90404; 
     titleText1.fixedToCamera = true;
 
     // Setup the jump key so it can also restart the game
@@ -68,31 +61,28 @@ CryptoCoaster.MainMenu.prototype = {
     var lastData = marketJSON.market_data[marketJSON.market_data.length-1];
 
     if (lastData.percent_change_24h < 0) {
-    	var marketColour = "#c90404";
+    	var marketColour = "0xc90404";
     } else {
-    	var marketColour = "#7CFC00";    	
+    	var marketColour = "0x7CFC00";    	
     }
 
-    var priceText = 'Current Price: $' + lastData.price_usd + '\r\nPercent Change 24h: ' + lastData.percent_change_24h + '%';
-
-    var marketText = this.game.add.text(this.game.camera.width * 0.5,  200, priceText, { 
-                                                                            stroke: "#000", 
-                                                                            strokeThickness: 10, 
-                                                                            font: "40px Flea Market Finds", 
-                                                                            fill: marketColour
-                                                                        });      
+    var marketText = this.game.add.bitmapText(this.game.camera.width * 0.5,  200, 'market', 'Current Price: $' + lastData.price_usd, 40);  
 
     marketText.x = (this.game.camera.width * 0.5 - (marketText.width * 0.5));  
+    marketText.tint = marketColour;
     marketText.fixedToCamera = true; 
 
-    var highscoreText = this.game.add.text(this.game.camera.width * 0.5,  320, 'Highscore: ' + CryptoCoaster.data.highScore, { 
-                                                                            stroke: "#000", 
-                                                                            strokeThickness: 10, 
-                                                                            font: "40px Flea Market Finds", 
-                                                                            fill: marketColour
-                                                                        });      
+    var moveText = this.game.add.bitmapText(this.game.camera.width * 0.5,  250, 'market', 'Percent Change 24h: ' + lastData.percent_change_24h + '%', 30);  
+
+    moveText.x = (this.game.camera.width * 0.5 - (marketText.width * 0.5));  
+    moveText.tint = marketColour;
+    moveText.fixedToCamera = true; 
+
+    var highscoreText = this.game.add.bitmapText(this.game.camera.width * 0.5,  300, 'market','Highscore: ' + CryptoCoaster.data.highScore, 30);
+
 
     highscoreText.x = (this.game.camera.width * 0.5 - (highscoreText.width * 0.5));  
+    highscoreText.tint = marketColour;
     highscoreText.fixedToCamera = true; 
 
 
@@ -108,13 +98,9 @@ CryptoCoaster.MainMenu.prototype = {
     this.CoasterTimer.start();    
     this.CoasterSetup();    
 
-    var contPrompt = this.game.add.text(this.game.camera.width * 0.5,  430, 'Space to continue', { 
-                                                                            stroke: "#000", 
-                                                                            strokeThickness: 10, 
-                                                                            font: "30px Flea Market Finds", 
-                                                                            fill: "#c90404"
-                                                                        });      
-
+    var contPrompt = this.game.add.bitmapText(this.game.camera.width * 0.5,  430, 'market','Space to continue', 30);
+ 
+    contPrompt.tint = 0xc90404;
     contPrompt.x = (this.game.camera.width * 0.5 - (contPrompt.width * 0.5));  
     contPrompt.fixedToCamera = true;             
   },

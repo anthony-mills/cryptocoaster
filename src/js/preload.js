@@ -22,6 +22,9 @@ CryptoCoaster.Preload.prototype = {
     this.load.image('gameBg', 'assets/images/game_background.jpg');
     this.load.image('playingBg', 'assets/images/theme_park_bg.png');
 
+    // Load game fonts
+    this.load.bitmapFont('market', 'assets/fonts/market.png', 'assets/fonts/market.fnt');
+
     // Get the market data
     if (!sessionStorage.btcPrice) {
       this.load.json('btcprice', 'https://cryptocoins.anthony-mills.com/currency/btc');
