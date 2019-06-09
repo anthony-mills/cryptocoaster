@@ -1,0 +1,132 @@
+{"frames": {
+
+"1.png":
+{
+	"frame": {"x":1019,"y":2,"w":122,"h":120},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":0,"y":0,"w":122,"h":120},
+	"sourceSize": {"w":125,"h":120}
+},
+"2.png":
+{
+	"frame": {"x":1019,"y":124,"w":122,"h":120},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":0,"y":0,"w":122,"h":120},
+	"sourceSize": {"w":125,"h":120}
+},
+"3.png":
+{
+	"frame": {"x":704,"y":137,"w":122,"h":120},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":0,"y":0,"w":122,"h":120},
+	"sourceSize": {"w":125,"h":120}
+},
+"4.png":
+{
+	"frame": {"x":828,"y":244,"w":122,"h":120},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":0,"y":0,"w":122,"h":120},
+	"sourceSize": {"w":125,"h":120}
+},
+"5.png":
+{
+	"frame": {"x":704,"y":259,"w":122,"h":120},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":0,"y":0,"w":122,"h":120},
+	"sourceSize": {"w":125,"h":120}
+},
+"6.png":
+{
+	"frame": {"x":828,"y":366,"w":122,"h":120},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":0,"y":0,"w":122,"h":120},
+	"sourceSize": {"w":125,"h":120}
+},
+"7.png":
+{
+	"frame": {"x":952,"y":246,"w":122,"h":120},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":0,"y":0,"w":122,"h":120},
+	"sourceSize": {"w":125,"h":120}
+},
+"BTC.png":
+{
+	"frame": {"x":1076,"y":246,"w":100,"h":100},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":100},
+	"sourceSize": {"w":100,"h":100}
+},
+"coaster-trail.png":
+{
+	"frame": {"x":704,"y":2,"w":191,"h":133},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":8,"y":0,"w":191,"h":133},
+	"sourceSize": {"w":200,"h":133}
+},
+"dead.png":
+{
+	"frame": {"x":952,"y":368,"w":122,"h":120},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":0,"y":0,"w":122,"h":120},
+	"sourceSize": {"w":125,"h":120}
+},
+"grass-clump.png":
+{
+	"frame": {"x":897,"y":128,"w":110,"h":114},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":110,"h":114},
+	"sourceSize": {"w":110,"h":114}
+},
+"headlines.png":
+{
+	"frame": {"x":2,"y":2,"w":700,"h":490},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":700,"h":490},
+	"sourceSize": {"w":700,"h":490}
+},
+"newspaper.png":
+{
+	"frame": {"x":1076,"y":348,"w":70,"h":42},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":70,"h":42},
+	"sourceSize": {"w":70,"h":42}
+},
+"title_coaster.png":
+{
+	"frame": {"x":704,"y":381,"w":101,"h":100},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":2,"y":0,"w":101,"h":100},
+	"sourceSize": {"w":103,"h":100}
+},
+"water-drop.png":
+{
+	"frame": {"x":897,"y":2,"w":120,"h":124},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":120,"h":124},
+	"sourceSize": {"w":120,"h":124}
+}},
+"meta": {
+	"app": "http://www.codeandweb.com/texturepacker",
+	"version": "1.0",
+	"image": "game-items.png",
+	"format": "RGBA8888",
+	"size": {"w":1178,"h":494},
+	"scale": "1",
+	"smartupdate": "$TexturePacker:SmartUpdate:6813768dab550921c62c117cdabd16f6:30ea769be406671b40f7a583de093091:9abfcec95e8c2eb1ea62882a296d0497$"
+}
+}

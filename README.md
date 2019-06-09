@@ -6,6 +6,10 @@ The game is built using [PhaserJS community](http://phaser.io/) and is dynamical
 
 You can play a [running version of the game here](https://gateway.ipfs.io/ipfs/Qma2P61qA2HCnQjjs4nhejLkU6bwbN34fGLYCNxhzsGSqh/).
 
+### Play
+
+You can play a [running version of the game here](https://www.anthony-mills.com/projects/cryptocoaster/index.html).
+
 ### Screenshots
 
 ![Title Screen](/screenshots/title_screen.png?raw=true "Title Screen")
@@ -47,10 +51,6 @@ The various game functionality is defined within the following game states:
 * src/js/main-menu.js - Merges the news articles and defines the game title sscreen
 * src/js/game.js - Controls the complete gameplay state and the game over functionality.
 * src/day-complete.js - If the BTC Roller Coaster Guy survives the full 24 hours of the Bitcoin market controls the game complete state.
-
-### Play
-
-You can play a [running version of the game here](https://gateway.ipfs.io/ipfs/Qma2P61qA2HCnQjjs4nhejLkU6bwbN34fGLYCNxhzsGSqh/).
 
 ### Licence
 

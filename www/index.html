@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title>CryptoCoaster</title>
+
+		<meta property="og:title" content="CryptoCoaster!">
+		<meta property="og:description" content="Help the BTC Rollercoaster guy survive a day in the BTC markets." />
+
+  		<style>
+			  body{
+			    margin: 0;
+			    padding: 0;
+			    height: 100%;
+			    background: #000;
+			    color : #ccc;
+
+			    image-rendering: optimizeSpeed;
+			    image-rendering: crisp-edges;
+			    image-rendering: -moz-crisp-edges;
+			    image-rendering: -o-crisp-edges;
+			    image-rendering: -webkit-optimize-contrast;
+			    image-rendering: optimize-contrast;
+			    -ms-interpolation-mode: nearest-neighbor;
+			  }
+
+				.textStory {
+					color: #ccc;
+					width: 600px;
+					margin: 0 auto;
+				}
+
+				@font-face {
+				    font-family: 'Flea Market Finds';
+				    src: url('assets/fonts/market.eot');
+				    src: url('assets/fonts/market.eot?#iefix') format('embedded-opentype'),
+				         url('assets/fonts/market.woff2') format('woff2'),
+				         url('assets/fonts/market.woff') format('woff'),
+				         url('assets/fonts/market.ttf') format('truetype'),
+				         url('assets/fonts/market.svg#FleaMarketFinds') format('svg');
+				    font-weight: normal;
+				    font-style: normal;
+				}
+  		</style>
+
+	</head>
+
+	<body>  
+  		<div class="fontPreload" style="font-family: Flea Market Finds;">.</div>
+
+		<div id="gameContainer" align="center"></div>
+		<div align="center">
+			<h3>Crypto Coaster</h3>
+			<p>Bitcoin markets are fast paced. Help the Bitcoin Rollercoaster guy navigate the last 24 hours of BTC trading.</p>
+
+			<h3>Controls</h3>
+
+			<strong>Jumping</strong>
+
+			<p>Simply use the up arrow key or spacebar to jump on a normal desktop computer. While in the air a double jump is possible by tapping space again.</p>
+
+			<strong>Moon Launch</strong>
+			<p>When the next section of track is too high above Rollercoaster guy, he can try his luck with a "Moon Launch" by pressing the "M" key. Rocket launches are inherently risky though, so this option should only be used as a last resort.</p>
+
+			<h3>FAQ</h3>
+
+			<strong>I am stuck the level is too hard!</strong>
+			<p>The game is generated dynamically using Bitcoin market data from the last 24 hours. On days of massive volatility its going to be very hard to keep the rollercoaster guy alive. Days of uneventful sideways trade will be the easiest time to play.</p>
+
+			<strong>WTF?!? Where is next section of track?</strong>
+			<p>The sections of the track represent represent Bitcoin price movements. Sometimes its hard to predict the future- long, short, where the next section of track is located is anyones guess.</p>
+
+			<h3>Beer Money</h3>
+			<p>
+				Enjoyed the game? Feel free to leave a few satoshis as thanks.
+			</p>
+
+			<p>
+				BTC: 3QiLHaxNUfXeyxcRgt3om5eaytrZiVkEqE
+			</p>
+
+			<img src="assets/images/beer_money.png" />
+		</div>
+		<script type="text/javascript" src="js/lib/phaser.min.js"></script>
+
+		<script type="text/javascript" src="js/boot.js"></script>
+		<script type="text/javascript" src="js/preload.js"></script>
+		<script type="text/javascript" src="js/main-menu.js"></script>		
+		<script type="text/javascript" src="js/game.js"></script>  		
+		<script type="text/javascript" src="js/day-complete.js"></script> 
+
+		<script type="text/javascript">
+			window.onload = function() {
+
+				var game = new Phaser.Game(700, 490, Phaser.CANVAS, 'gameContainer');
+
+				game.state.add('Boot', CryptoCoaster.Boot);
+				game.state.add('Preload', CryptoCoaster.Preload);
+				game.state.add('MainMenu', CryptoCoaster.MainMenu);
+				game.state.add('Game', CryptoCoaster.Game);
+				game.state.add('DayComplete', CryptoCoaster.DayComplete);
+
+				game.state.start('Boot');
+			};
+		</script>		
+	</body>
+</html>

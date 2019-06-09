@@ -1,0 +1,52 @@
+{"frames": {
+
+"1.png":
+{
+	"frame": {"x":168,"y":2,"w":78,"h":100},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":78,"h":100},
+	"sourceSize": {"w":78,"h":100}
+},
+"2.png":
+{
+	"frame": {"x":248,"y":2,"w":73,"h":100},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":73,"h":100},
+	"sourceSize": {"w":73,"h":100}
+},
+"3.png":
+{
+	"frame": {"x":323,"y":2,"w":70,"h":100},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":70,"h":100},
+	"sourceSize": {"w":70,"h":100}
+},
+"4.png":
+{
+	"frame": {"x":2,"y":2,"w":81,"h":100},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":81,"h":100},
+	"sourceSize": {"w":81,"h":100}
+},
+"dead.png":
+{
+	"frame": {"x":85,"y":2,"w":81,"h":100},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":81,"h":100},
+	"sourceSize": {"w":81,"h":100}
+}},
+"meta": {
+	"app": "http://www.codeandweb.com/texturepacker",
+	"version": "1.0",
+	"image": "santa.png",
+	"format": "RGBA8888",
+	"size": {"w":395,"h":104},
+	"scale": "1",
+	"smartupdate": "$TexturePacker:SmartUpdate:c07e32872806e53ec4d09f5d21bafc12:343cc5bec40c2ad9addb8e946ad5e214:3095c57fbbd330068b206a9f43d27330$"
+}
+}
