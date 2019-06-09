@@ -24,6 +24,7 @@ CryptoCoaster.Preload.prototype = {
 
     // Load game fonts
     this.load.bitmapFont('market', 'assets/fonts/market.png', 'assets/fonts/market.fnt');
+    this.load.bitmapFont('light', 'assets/fonts/light.png', 'assets/fonts/light.fnt');
 
     // Get the market data
     if (!sessionStorage.btcPrice) {

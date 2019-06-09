@@ -188,12 +188,8 @@ CryptoCoaster.Game.prototype = {
       this.runSpeed = 300;
       var txtMsg = ['To the moon!', 'Lambo time!', 'HODL tight!', 'Lets hunt bearwhales!', 'Bullish on Bitcoin...' ];
 
-      var startText = this.game.add.text(this.game.camera.width * 0.5, 200, txtMsg[Math.floor(Math.random() * txtMsg.length)], {
-                                                                              stroke: "#000",
-                                                                              strokeThickness: 10,
-                                                                              font: "40px Flea Market Finds",
-                                                                              fill: "#c90404"
-                                                                          });
+      var startText = this.game.add.bitmapText(this.game.camera.width * 0.5, 200, 'market',txtMsg[Math.floor(Math.random() * txtMsg.length)], 40);
+      startText.tint = 0xc90404;
       startText.x = (this.game.camera.width * 0.5 - (startText.width * 0.5));
       startText.fixedToCamera = true;
 
@@ -256,30 +252,18 @@ CryptoCoaster.Game.prototype = {
     this.enterKey = this.game.input.keyboard.addKey(Phaser.Keyboard.ENTER);
 
     // Setup the score object
-    CryptoCoaster.data.scoreObject = this.game.add.text(20, 400, 'Score: ' + CryptoCoaster.data.currentScore, {
-                                                                            stroke: "#000",
-                                                                            strokeThickness: 10,
-                                                                            font: "50px Flea Market Finds",
-                                                                            fill: "#c90404"
-                                                                        });
+    CryptoCoaster.data.scoreObject = this.game.add.bitmapText(20, 400, 'market', 'Score: ' + CryptoCoaster.data.currentScore, 50);
+    CryptoCoaster.data.scoreObject.tint = 0xc90404;
     CryptoCoaster.data.scoreObject.fixedToCamera = true;
 
     // Setup the moonjump countdown
-    CryptoCoaster.data.moonjumpObject = this.game.add.text(20, 450, 'Moon Launch: Ready', {
-                                                                            stroke: "#000",
-                                                                            strokeThickness: 10,
-                                                                            font: "25px Flea Market Finds",
-                                                                            fill: "#7CFC00"
-                                                                        });
+    CryptoCoaster.data.moonjumpObject = this.game.add.bitmapText(20, 450, 'market', 'Moon Launch: Ready', 25);
+    CryptoCoaster.data.moonjumpObject.tint = 0x7CFC00;
     CryptoCoaster.data.moonjumpObject.fixedToCamera = true;
 
     // Setup the price object
-    CryptoCoaster.data.priceObject = this.game.add.text(20, 20, 'Price: $' + CryptoCoaster.data.currentPrice, {
-                                                                            stroke: "#000",
-                                                                            strokeThickness: 10,
-                                                                            font: "50px Flea Market Finds",
-                                                                            fill: "#7CFC00"
-                                                                        });
+    CryptoCoaster.data.priceObject = this.game.add.bitmapText(20, 20, 'market', 'Price: $' + CryptoCoaster.data.currentPrice, 50);
+    CryptoCoaster.data.priceObject.tint = 0x7CFC00;
     CryptoCoaster.data.priceObject.fixedToCamera = true;    
 
     // Setup the required sounds
@@ -388,20 +372,16 @@ CryptoCoaster.Game.prototype = {
         CryptoCoaster.data.currentPrice = curPrice.price_usd;
 
         if (curPrice.price_usd < lastPrice) {
-          var marketColour = "#c90404";
+          var marketColour = "0xc90404";
         } else {
-          var marketColour = "#7CFC00";     
+          var marketColour = "0x7CFC00";     
         }       
 
         CryptoCoaster.data.priceObject.destroy();
 
         // Setup the price object
-        CryptoCoaster.data.priceObject = this.game.add.text(20, 20, 'Price: $' + curPrice.price_usd, {
-                                                                                stroke: "#000",
-                                                                                strokeThickness: 10,
-                                                                                font: "50px Flea Market Finds",
-                                                                                fill: marketColour
-                                                                            });
+        CryptoCoaster.data.priceObject = this.game.add.bitmapText(20, 20, 'market', 'Price: $' + curPrice.price_usd, 50);
+        CryptoCoaster.data.priceObject.tint = marketColour
         CryptoCoaster.data.priceObject.fixedToCamera = true;    
         
         this.landSound.play();
@@ -449,12 +429,8 @@ CryptoCoaster.Game.prototype = {
 
   	// Update the score
   	CryptoCoaster.data.scoreObject.kill();
-    CryptoCoaster.data.scoreObject = this.game.add.text(20, 400, 'Score: ' + CryptoCoaster.data.currentScore, {
-                                                                            stroke: "#000",
-                                                                            strokeThickness: 10,
-                                                                            font: "50px Flea Market Finds",
-                                                                            fill: "#c90404"
-                                                                        });
+    CryptoCoaster.data.scoreObject = this.game.add.bitmapText(20, 400, 'market', 'Score: ' + CryptoCoaster.data.currentScore, 50);
+    CryptoCoaster.data.scoreObject.tint = 0xc90404;
     CryptoCoaster.data.scoreObject.fixedToCamera = true;
     
     var self = this;
@@ -495,31 +471,20 @@ CryptoCoaster.Game.prototype = {
     CryptoCoaster.data.newspaperBg = this.add.tileSprite(0, 0, 800, 490, 'gameItems', 'headlines.png');
     CryptoCoaster.data.newspaperBg.fixedToCamera = true;
 
-    var bodyStyle = { 
-                      font: "20px Arial", 
-                      fill: "#000", 
-                      align: "center", 
-                      boundsAlignH: "left", 
-                      boundsAlignV: "top", 
-                      wordWrap: true, 
-                      wordWrapWidth: 600 
-                    };
-
-    CryptoCoaster.data.newsHeadline = this.game.add.text(50, 150, newsHeadline.title, bodyStyle);
+    var showHeadline = this.wordWrap( newsHeadline.title, 60 );
+    CryptoCoaster.data.newsHeadline = this.game.add.bitmapText(50, 150, 'light', showHeadline, 25);
+    CryptoCoaster.data.newsHeadline.tint = 0x000000;
     CryptoCoaster.data.newsHeadline.fixedToCamera = true;
 
-    bodyStyle.font = "18px Arial";
-
-    CryptoCoaster.data.newsRead = this.game.add.text(50, 330, 'Press enter to read more', bodyStyle);
+    CryptoCoaster.data.newsRead = this.game.add.bitmapText(50, 330, 'light', 'Press enter to read more', 18);
     CryptoCoaster.data.newsRead.x = (this.game.camera.width / 2) - (CryptoCoaster.data.newsRead.width / 2); 
+    CryptoCoaster.data.newsRead.tint = 0x000000;
     CryptoCoaster.data.newsRead.fixedToCamera = true;  
 
-    CryptoCoaster.data.newsCont = this.game.add.text(50, 360, 'Space to continue', bodyStyle);
+    CryptoCoaster.data.newsCont = this.game.add.bitmapText(50, 360, 'light', 'Space to continue', 18);
     CryptoCoaster.data.newsCont.x = (this.game.camera.width / 2) - (CryptoCoaster.data.newsCont.width / 2); 
+    CryptoCoaster.data.newsCont.tint = 0x000000;
     CryptoCoaster.data.newsCont.fixedToCamera = true; 
-
-    bodyStyle.font = "16px Arial";
-    bodyStyle.align = "left"; 
 
     var newsBody = newsHeadline.description;
     var newsBody = newsBody.replace(/<(?:.|\n)*?>/gm, '');
@@ -545,7 +510,11 @@ CryptoCoaster.Game.prototype = {
 
     var newsBody = truncate( newsBody , 300 ); 
 
-    CryptoCoaster.data.newsBody = this.game.add.text(50, 200, newsBody, bodyStyle);
+    newsBody = this.wordWrap( newsBody, 80 );
+
+    CryptoCoaster.data.newsBody = this.game.add.bitmapText(200, 210, 'light', newsBody, 18);
+    CryptoCoaster.data.newsBody.tint = 0x000000;
+    CryptoCoaster.data.newsBody.x = (this.game.camera.width / 2) - (CryptoCoaster.data.newsBody.width / 2); 
     CryptoCoaster.data.newsBody.fixedToCamera = true;    
   },
 
@@ -582,12 +551,8 @@ CryptoCoaster.Game.prototype = {
                   'Mempool full'
                 ];
       
-    var gameOverText = this.game.add.text(this.game.camera.width * 0.5, 120, txtMsg[Math.floor(Math.random() * txtMsg.length)], {
-                                                                            stroke: "#000",
-                                                                            strokeThickness: 10,
-                                                                            font: "50px Flea Market Finds",
-                                                                            fill: "#c90404"
-                                                                        });
+    var gameOverText = this.game.add.bitmapText(this.game.camera.width * 0.5, 120, 'market', txtMsg[Math.floor(Math.random() * txtMsg.length)], 40);
+    gameOverText.tint = 0xc90404;
 
     gameOverText.x = (this.game.camera.width * 0.5 - (gameOverText.width * 0.5));
     gameOverText.fixedToCamera = true;
@@ -603,6 +568,36 @@ CryptoCoaster.Game.prototype = {
 
     // Go to gameover after a few miliseconds
     this.game.time.events.add(6000, this.mainMenu, this);
+  },
+
+  wordWrap: function(str, maxWidth) {
+    var newLineStr = "\n"; done = false; res = '';
+    do {                    
+        found = false;
+        // Inserts new line at first whitespace of the line
+        for (i = maxWidth - 1; i >= 0; i--) {
+            if (this.testWhite(str.charAt(i))) {
+                res = res + [str.slice(0, i), newLineStr].join('');
+                str = str.slice(i + 1);
+                found = true;
+                break;
+            }
+        }
+        if (!found) {
+            res += [str.slice(0, maxWidth), newLineStr].join('');
+            str = str.slice(maxWidth);
+        }
+
+        if (str.length < maxWidth)
+            done = true;
+    } while (!done);
+
+    return res + str;
+  },
+
+  testWhite: function(x) {
+    var white = new RegExp(/^\s$/);
+    return white.test(x.charAt(0));
   },
 
   mainMenu: function() {
@@ -661,11 +656,11 @@ CryptoCoaster.Game.prototype = {
                                             Phaser.Timer.SECOND * 10, 
                                             function() {
                                               CryptoCoaster.data.moonJump = 0;
-                                              this.toggleMoonStatus('Moon Launch: Ready', "#7CFC00");
+                                              this.toggleMoonStatus('Moon Launch: Ready', 0x7CFC00);
                                             }, this
                                           );
 
-      this.toggleMoonStatus('Moon Launch: Thrusters Charging', "#c90404");
+      this.toggleMoonStatus('Moon Launch: Thrusters Charging', 0xc90404);
       
       this.add.tween( this.player ).to(
           {
@@ -712,12 +707,8 @@ CryptoCoaster.Game.prototype = {
   toggleMoonStatus: function( textMsg, textColour ) {
       // Setup the moonjump countdown
       CryptoCoaster.data.moonjumpObject.destroy();
-      CryptoCoaster.data.moonjumpObject = this.game.add.text(20, 450, textMsg, {
-                                                                              stroke: "#000",
-                                                                              strokeThickness: 10,
-                                                                              font: "25px Flea Market Finds",
-                                                                              fill: textColour
-                                                                          });
+      CryptoCoaster.data.moonjumpObject = this.game.add.bitmapText(20, 450, 'market', textMsg, 20);
+      CryptoCoaster.data.moonjumpObject.tint = textColour;
       CryptoCoaster.data.moonjumpObject.fixedToCamera = true;
   },
 
