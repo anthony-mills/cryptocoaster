@@ -4,8 +4,6 @@ Help the Bitcoin Rollercoaster Guy navigate the last 24 hours of the BTC markets
 
 The game is built using [PhaserJS community](http://phaser.io/) and is dynamically generated using Bitcoin market data from the last 24 hours.
 
-You can play a [running version of the game here](https://gateway.ipfs.io/ipfs/Qma2P61qA2HCnQjjs4nhejLkU6bwbN34fGLYCNxhzsGSqh/).
-
 ### Play
 
 You can play a [running version of the game here](https://www.anthony-mills.com/projects/cryptocoaster/index.html).
